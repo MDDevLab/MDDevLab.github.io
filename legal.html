@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum & Datenschutz · Legal notice & Privacy – MDDevLab</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --navy:#01183A; --navy-deep:#000F26; --card:#06244F; --card-line:#0B3670;
+    --blue-deep:#012B8E; --blue:#0398ED; --sky:#05ACE2; --turq:#06B9C5;
+    --text:#F2F7FF; --muted:#A9C4E6;
+    --grad:linear-gradient(90deg,#0398ED,#05ACE2,#06B9C5);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:var(--navy-deep);color:var(--text);line-height:1.6;
+  }
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:10;background:rgba(0,15,38,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--card-line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+  .brand{font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:.2px}
+  .brand .lab,.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  nav{display:flex;gap:22px}
+  nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
+  nav a:hover{color:var(--text)}
+  .lang{display:flex;border:1px solid var(--card-line);border-radius:8px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--muted);padding:6px 10px;
+    font:inherit;font-size:.85rem;cursor:pointer}
+  .lang button.on{background:var(--blue-deep);color:#fff}
+
+  /* Hero */
+  .hero{padding:96px 0 80px;text-align:center;
+    background:radial-gradient(ellipse at top,rgba(3,152,237,.22),transparent 60%),var(--navy)}
+  .hero h1{font-size:clamp(2.6rem,8vw,4.4rem);font-weight:800;line-height:1.1}
+  .slogan{margin-top:10px;font-size:.85rem;letter-spacing:.32em;color:var(--sky);font-weight:600}
+  .hero p.lead{max-width:640px;margin:28px auto 0;font-size:1.15rem;color:var(--muted)}
+  .badges{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+  .badge{border:1px solid var(--card-line);background:var(--card);border-radius:999px;
+    padding:8px 16px;font-size:.92rem}
+  .badge b{color:var(--turq)}
+
+  /* Sections */
+  section{padding:80px 0}
+  section.alt{background:var(--navy)}
+  h2{font-size:clamp(1.7rem,4vw,2.2rem);margin-bottom:8px}
+  .line{width:56px;height:4px;border-radius:2px;background:var(--grad);margin-bottom:32px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+  .card{background:var(--card);border:1px solid var(--card-line);border-radius:16px;padding:28px}
+  .card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+  .icon{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;
+    background:rgba(3,152,237,.14);color:var(--sky)}
+  .soon{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--navy-deep);background:var(--grad);padding:5px 12px;border-radius:999px}
+  .card h3{font-size:1.35rem}
+  .by{font-size:.85rem;color:var(--muted);margin-bottom:12px}
+  .card p{color:var(--muted)}
+  .about p{max-width:720px;color:var(--muted);font-size:1.08rem;margin-bottom:16px}
+  .about strong{color:var(--text)}
+  .contact{text-align:center}
+  .contact .line{margin:0 auto 28px}
+  .contact p{color:var(--muted);font-size:1.08rem}
+  .mail{display:inline-block;margin-top:24px;padding:14px 28px;border-radius:12px;
+    background:var(--grad);color:var(--navy-deep);font-weight:700;text-decoration:none;font-size:1.05rem}
+  .mail:hover{filter:brightness(1.08)}
+
+  footer{border-top:1px solid var(--card-line);padding:28px 0;text-align:center;
+    color:var(--muted);font-size:.88rem}
+
+  @media (max-width:720px){
+    nav{display:none}
+    .hero{padding:72px 0 60px}
+    section{padding:60px 0}
+  }
+
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand img{height:34px;width:auto;border-radius:8px;display:block}
+  .banner{display:block;width:100%;height:auto;border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid var(--card-line)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .hero{padding:48px 0 72px}
+  @media (max-width:720px){.hero{padding:24px 0 52px}.banner{border-radius:12px}}
+  .rec-tag{font-size:.78rem;font-weight:700;color:var(--turq);border:1px solid var(--turq);
+    padding:4px 10px;border-radius:999px}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .btn{display:inline-block;padding:9px 16px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.92rem}
+  .btn.main{background:var(--grad);color:var(--navy-deep)}
+  .btn.ghost{border:1px solid var(--card-line);color:var(--text)}
+  .btn:hover{filter:brightness(1.1)}
+</style>
+<style>
+  .back{color:var(--muted);text-decoration:none;font-size:.95rem}
+  .legal{padding:56px 0 72px;max-width:820px}
+  .legal p{color:var(--muted);margin-bottom:16px}
+  .legal strong{color:var(--text)}
+  .legal a{color:var(--sky)}
+  .todo{background:#5a3d00;color:#ffd27a;padding:0 4px;border-radius:4px}
+  .note-box{border:1px solid var(--card-line);background:var(--card);border-radius:10px;padding:12px 16px}
+  .small{font-size:.85rem}
+  [data-block]{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a href="index.html" class="brand"><img src="data:image/jpeg;base64,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" alt="MDDevLab logo"><span>MDDev<span class="lab">Lab</span>™</span></a>
+    <a href="index.html" class="back" data-i18n="back"></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><button data-lang="tr">TR</button><button data-lang="de">DE</button>
+    </div>
+  </div>
+</header>
+<main class="wrap legal">
+  <div data-block="de"><h2 id="impressum">Impressum</h2><div class="line"></div>
+<p><strong>Angaben gemäß § 5 DDG und § 18 Abs. 1 MStV</strong></p>
+<p>Murat Dursun<br>Weißenhornstr. 4<br>85055 Ingolstadt<br>Deutschland</p>
+<p><strong>Kontakt</strong><br>E-Mail: <a href="mailto:mddevlab@gmail.com">mddevlab@gmail.com</a></p>
+<p><strong>Haftung für Links</strong><br>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese Inhalte ist stets der jeweilige Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen entfernen wir solche Links umgehend.</p>
+<p><strong>Urheberrecht und Marke</strong><br>Die Texte, Bilder und Screenshots dieser Website, die MDDevLab-Software (RC Labs, Zakim) und das MDDevLab-Logo sind urheberrechtlich geschützt, soweit die Rechte bei uns liegen. Enthaltene Komponenten Dritter (z. B. Open-Source-Bibliotheken) unterliegen den Lizenzen ihrer jeweiligen Rechteinhaber. Jede Verwendung außerhalb der Grenzen des Urheberrechts bedarf unserer vorherigen schriftlichen Zustimmung. „MDDevLab“ ist der Name, unter dem wir unsere Projekte veröffentlichen; das Zeichen ™ kennzeichnet ihn als unseren Markennamen und bedeutet nicht, dass es sich um eine eingetragene Marke handelt.</p>
+
+<h2 id="datenschutz" style="margin-top:56px">Datenschutzerklärung</h2><div class="line"></div>
+<p>Diese Datenschutzerklärung gilt für Besucher aus allen Ländern. Sie erklärt, was mit Ihren Daten geschieht, wenn Sie mddevlab.com besuchen. Kurz gesagt: Wir verfolgen Sie nicht, verwenden keine Cookies oder Analysewerkzeuge und verkaufen keine Daten. Personenbezogene Daten werden beim technischen Betrieb der Website durch unseren Hosting-Anbieter GitHub verarbeitet (Abschnitt 3). Wenn Sie uns eine E-Mail schreiben, verarbeiten wir Ihre Nachricht und Ihre E-Mail-Adresse, um Ihnen zu antworten; Google verarbeitet die E-Mails dabei zusätzlich im Rahmen seines Gmail-Dienstes in eigener Verantwortung (Abschnitt 6).</p>
+<p><strong>1. Verantwortlicher</strong><br>Murat Dursun, Weißenhornstr. 4, 85055 Ingolstadt, Deutschland · E-Mail: <a href="mailto:mddevlab@gmail.com">mddevlab@gmail.com</a></p>
+<p><strong>2. Keine Cookies, kein Tracking</strong><br>Diese Website verwendet keine Cookies, keine Analyse- oder Tracking-Werkzeuge, keine Werbung, keine Social-Media-Plugins und keine eingebetteten Videos und lädt keine Schriftarten oder Skripte von fremden Servern. Sie müssen uns keine personenbezogenen Daten mitteilen, um die Website zu nutzen.</p>
+<p><strong>3. Hosting und Server-Logfiles</strong><br>Diese Website wird bei GitHub Pages gehostet (GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA). Beim Aufruf verarbeitet GitHub automatisch technisch notwendige Daten – insbesondere Ihre IP-Adresse, Datum und Uhrzeit des Zugriffs sowie Browserangaben –, um die Seite auszuliefern und die Sicherheit zu gewährleisten. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und funktionsfähigen Website). GitHub kann dafür technische Dienstleister (z. B. Content-Delivery-Netzwerke) einsetzen. Wir haben keinen Zugriff auf diese Logfiles. Wie lange GitHub sie speichert, ist in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a> beschrieben.</p>
+<p><strong>4. Übermittlung in Drittländer</strong><br>Da GitHub ein US-Unternehmen ist, können Daten in den USA verarbeitet werden. GitHub stützt sich dabei auf das EU-US Data Privacy Framework und auf von der Europäischen Kommission genehmigte Standardvertragsklauseln. Auch unser E-Mail-Anbieter (siehe Abschnitt 6) kann Daten außerhalb Ihres Landes verarbeiten.</p>
+<p><strong>5. Spracheinstellung</strong><br>Nur wenn Sie auf eine Sprachschaltfläche klicken, wird Ihre Auswahl (z. B. „de“) ausschließlich in Ihrem eigenen Browser gespeichert (localStorage), damit die Seite beim nächsten Besuch in dieser Sprache erscheint. Diese Information wird nie an uns übertragen und enthält keine personenbezogenen Daten. Sie bleibt gespeichert, bis Sie sie in Ihren Browsereinstellungen löschen. Diese Speicherung ist für eine von Ihnen ausdrücklich gewünschte Funktion unbedingt erforderlich, daher ist keine Einwilligung nötig (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 5 Abs. 3 ePrivacy-Richtlinie). Aus diesem Grund zeigt die Website kein Cookie-Banner.</p>
+<p><strong>6. Kontakt per E-Mail</strong><br>Wenn Sie uns eine E-Mail schreiben, verwenden wir Ihre E-Mail-Adresse und Ihre Nachricht nur, um Ihnen zu antworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung Ihrer Anfrage); betrifft Ihre Anfrage den Abschluss eines Vertrags, Art. 6 Abs. 1 lit. b DSGVO. Wir löschen sie, sobald die Angelegenheit erledigt ist, sofern keine gesetzlichen Aufbewahrungspflichten bestehen. Wir empfangen E-Mails über ein normales Gmail-Konto. Google (Google Ireland Limited, Dublin, Irland) handelt hier nicht als unser Auftragsverarbeiter, sondern verarbeitet E-Mails in eigener Verantwortung nach seiner eigenen <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">Datenschutzerklärung</a>; Daten können dabei auch außerhalb der EU verarbeitet werden. Die Kontaktaufnahme ist freiwillig; ohne Ihre E-Mail-Adresse können wir Ihnen allerdings nicht antworten. Bitte senden Sie uns keine sensiblen Informationen per E-Mail.</p>
+<p><strong>7. Externe Links</strong><br>Diese Website enthält Links zu anderen Websites (z. B. layerling.com und github.com). Erst wenn Sie einen Link anklicken, werden Daten an den jeweiligen Anbieter übertragen; danach gilt dessen Datenschutzerklärung.</p>
+<p><strong>8. Was wir NICHT tun</strong><br>Wir verkaufen keine personenbezogenen Daten und verwenden sie nicht für Werbezwecke. Wir erstellen keine Profile und treffen keine automatisierten Entscheidungen. Eine Verarbeitung durch unsere Dienstleister (GitHub, Google) erfolgt ausschließlich im Rahmen der in dieser Datenschutzerklärung beschriebenen Leistungen.</p>
+<p><strong>9. Kinder</strong><br>Diese Website richtet sich an ein allgemeines Publikum und nicht an Kinder. Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Wenn Sie glauben, dass ein Kind uns personenbezogene Daten per E-Mail geschickt hat, teilen Sie uns dies bitte mit; wir löschen sie dann.</p>
+<p><strong>10. Sicherheit</strong><br>Die Website wird ausschließlich über eine verschlüsselte Verbindung (HTTPS) ausgeliefert.</p>
+<p><strong>11. Ihre Rechte</strong><br>Je nachdem, wo Sie leben, haben Sie folgende Rechte bezüglich Ihrer personenbezogenen Daten. Um sie auszuüben, schreiben Sie uns einfach eine E-Mail; das ist kostenlos, und Sie werden deswegen nicht anders behandelt.</p>
+<p>• <strong>EU, EWR und Vereinigtes Königreich (DSGVO / UK GDPR):</strong> Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO) sowie das Recht auf Beschwerde bei einer Aufsichtsbehörde – z. B. beim Bayerischen Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach, Deutschland – oder bei der Behörde in Ihrem Land.<br>
+• <strong>Türkei (KVKK, Gesetz Nr. 6698):</strong> die Rechte nach Artikel 11, u. a. zu erfahren, ob Ihre Daten verarbeitet werden, Auskunft, Berichtigung oder Löschung zu verlangen, zu erfahren, ob Daten ins Ausland übermittelt werden, sowie Beschwerde bei der Datenschutzbehörde (KVKK) einzulegen.<br>
+• <strong>USA, z. B. Kalifornien (CCPA/CPRA), soweit anwendbar:</strong> das Recht auf Auskunft, Löschung und Berichtigung personenbezogener Informationen. Wir verkaufen keine personenbezogenen Informationen.<br>
+• <strong>Andere Länder:</strong> Ihre Datenschutzrechte richten sich nach dem in Ihrem Land geltenden Recht.</p>
+<p><strong>12. Widerspruchsrecht (Art. 21 DSGVO)</strong><br><strong>Soweit wir Ihre Daten auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO) verarbeiten, haben Sie das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.</strong> Wir verarbeiten Ihre Daten dann nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe nachweisen oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen. Eine formlose E-Mail an uns genügt.</p>
+<p><strong>13. Änderungen</strong><br>Wir passen diese Datenschutzerklärung an, wenn sich die Website ändert (z. B. wenn wir neue Funktionen hinzufügen). Die aktuelle Fassung finden Sie immer auf dieser Seite.</p>
+<p>Bei Abweichungen zwischen der deutschen, englischen und türkischen Fassung gilt die deutsche Fassung.</p>
+<p class="small">Stand: November 2026</p></div>
+  <div data-block="en">
+
+<h2 id="impressum">Legal notice (Impressum)</h2><div class="line"></div>
+<p><strong>Information pursuant to § 5 DDG and § 18(1) MStV</strong></p>
+<p>Murat Dursun<br>Weißenhornstr. 4<br>85055 Ingolstadt<br>Germany</p>
+<p><strong>Contact</strong><br>Email: <a href="mailto:mddevlab@gmail.com">mddevlab@gmail.com</a></p>
+<p><strong>Links</strong><br>This website links to external websites of third parties. Their content is the responsibility of the respective provider. We remove such links promptly if we learn of any legal violations.</p>
+<p><strong>Copyright and brand</strong><br>The texts, images and screenshots on this website, the MDDevLab software (RC Labs, Zakim) and the MDDevLab logo are protected by copyright, to the extent the rights belong to us. Any third-party components they contain (for example open-source libraries) are subject to the licenses of their respective owners. Using them beyond what copyright law allows requires our prior written permission. "MDDevLab" is the name we use for our projects; the ™ symbol marks it as our brand name and does not mean it is a registered trademark.</p>
+<h2 id="datenschutz" style="margin-top:56px">Privacy policy</h2><div class="line"></div>
+<p>This policy applies to visitors from all countries. It explains what happens to your data when you visit mddevlab.com. The short version: we do not track you, we do not use cookies or analytics, and we do not sell data. Personal data is processed by our hosting provider GitHub for the technical operation of the website (section 3). If you email us, we process your message and email address to reply to you; Google also processes the emails as part of its Gmail service under its own responsibility (section 6).</p>
+<p><strong>1. Controller</strong><br>Murat Dursun, Weißenhornstr. 4, 85055 Ingolstadt, Germany · email: <a href="mailto:mddevlab@gmail.com">mddevlab@gmail.com</a>.</p>
+<p><strong>2. No cookies, no tracking</strong><br>This website uses no cookies, no analytics or tracking tools, no advertising, no social media plugins and no embedded videos, and it loads no fonts or scripts from third-party servers. You do not have to give us any personal data to use it.</p>
+<p><strong>3. Hosting and server logs</strong><br>This website is hosted on GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA). When you visit, GitHub automatically processes technically necessary data – in particular your IP address, date and time of access and browser details – to deliver the page and keep it secure. Legal basis: Art. 6(1)(f) GDPR (legitimate interest in a secure, working website). GitHub may use technical service providers (for example content delivery networks) for this. We have no access to these logs. How long GitHub keeps them is described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+<p><strong>4. International data transfers</strong><br>Because GitHub is a US company, data may be processed in the USA. GitHub relies on the EU-US Data Privacy Framework and standard contractual clauses approved by the European Commission. Our email provider (see section 6) may also process data outside your country.</p>
+<p><strong>5. Language setting</strong><br>Only when you click a language button, your choice (for example "en") is saved only in your own browser (localStorage) so the page opens in that language next time. It is never sent to us and contains no personal data. It is kept until you delete it in your browser settings. This storage is strictly necessary for a function you requested yourself, so no consent is required (Section 25(2) No. 2 TDDDG, Art. 5(3) ePrivacy Directive). For this reason the website shows no cookie banner.</p>
+<p><strong>6. Contact by email</strong><br>If you email us, we use your email address and message only to reply to you. Legal basis: Art. 6(1)(f) GDPR (legitimate interest in answering your request); if your request concerns entering into a contract, Art. 6(1)(b) GDPR. We delete them once the matter is closed, unless the law requires us to keep them longer. We receive emails through a regular Gmail account. Google (Google Ireland Limited, Dublin, Ireland) does not act as our data processor here; it processes emails under its own responsibility and its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>, and data may also be processed outside the EU. Contacting us is voluntary; without your email address, however, we cannot reply. Please do not send sensitive information by email.</p>
+<p><strong>7. External links</strong><br>This website links to other websites (for example layerling.com and github.com). No data is sent to them until you click a link; after that, their own privacy policies apply.</p>
+<p><strong>8. What we do NOT do</strong><br>We do not sell personal data or use it for advertising purposes. We do not build profiles and make no automated decisions. Our service providers (GitHub, Google) process data only in connection with the services described in this privacy policy.</p>
+<p><strong>9. Children</strong><br>This website is meant for a general audience and is not directed at children. We do not knowingly collect personal data from children. If you believe a child has emailed us personal data, please tell us and we will delete it.</p>
+<p><strong>10. Security</strong><br>The website is delivered only over an encrypted connection (HTTPS).</p>
+<p><strong>11. Your rights</strong><br>Depending on where you live, you have these rights regarding your personal data. To use any of them, just email us; it is free of charge and you will not be treated differently for using them.</p>
+<p>• <strong>EU, EEA and UK (GDPR / UK GDPR):</strong> access, correction, deletion, restriction of processing, data portability and objection (Art. 15–21 GDPR), and the right to complain to a supervisory authority – for example the Bavarian Data Protection Authority (BayLDA), Promenade 18, 91522 Ansbach, Germany – or the authority in your own country.<br>
+• <strong>Turkey (KVKK, Law No. 6698):</strong> the rights under Article 11, including to learn whether your data is processed, to request information, correction or deletion, to learn about transfers abroad, and to complain to the Personal Data Protection Authority (KVKK).<br>
+• <strong>USA, e.g. California (CCPA/CPRA), where applicable:</strong> the right to know, delete and correct personal information. We do not sell personal information.<br>
+• <strong>Other countries:</strong> your data protection rights depend on the laws that apply in your country.</p>
+<p><strong>12. Right to object (Art. 21 GDPR)</strong><br><strong>Where we process your data on the basis of legitimate interests (Art. 6(1)(f) GDPR), you have the right to object to this processing at any time on grounds relating to your particular situation.</strong> We will then stop processing your data unless we can demonstrate compelling legitimate grounds or the processing serves the establishment, exercise or defence of legal claims. A simple email to us is enough.</p>
+<p><strong>13. Changes</strong><br>We update this policy when the website changes (for example if we ever add new features). The current version is always on this page.</p>
+<p>If the German, English and Turkish versions differ, the German version applies.</p>
+<p class="small">Last updated: November 2026</p>
+</div>
+  <div data-block="tr">
+
+<h2 id="impressum">Künye (Impressum)</h2><div class="line"></div>
+<p><strong>§ 5 DDG ve § 18 Abs. 1 MStV uyarınca bilgiler</strong></p>
+<p>Murat Dursun<br>Weißenhornstr. 4<br>85055 Ingolstadt<br>Almanya</p>
+<p><strong>İletişim</strong><br>E-posta: <a href="mailto:mddevlab@gmail.com">mddevlab@gmail.com</a></p>
+<p><strong>Linkler</strong><br>Bu sitede başka sitelere linkler var. O sitelerin içeriğinden kendi sahipleri sorumludur. Hukuka aykırı bir durum öğrenirsek linki hemen kaldırırız.</p>
+<p><strong>Telif hakkı ve marka</strong><br>Bu sitedeki yazılar, resimler ve ekran görüntüleri, MDDevLab yazılımları (RC Labs, Zakim) ve MDDevLab logosu, haklar bize ait olduğu ölçüde telif hakkıyla korunur. İçerdikleri üçüncü taraf bileşenler (ör. açık kaynak kütüphaneler) kendi sahiplerinin lisanslarına tabidir. Telif hukukunun izin verdiğinin dışında kullanmak için önceden yazılı iznimiz gerekir. "MDDevLab" projelerimiz için kullandığımız addır; ™ işareti onu markamız olarak gösterir, tescilli marka olduğu anlamına gelmez.</p>
+<h2 id="datenschutz" style="margin-top:56px">Gizlilik politikası</h2><div class="line"></div>
+<p>Bu politika bütün ülkelerden gelen ziyaretçiler için geçerlidir. mddevlab.com'u ziyaret ettiğinizde verilerinize ne olduğunu anlatır. Kısacası: sizi takip etmiyoruz, çerez veya istatistik kullanmıyoruz ve veri satmıyoruz. Kişisel veriler, sitenin teknik işleyişi için barındırma sağlayıcımız GitHub tarafından işlenir (madde 3). Bize e-posta yazarsanız mesajınızı ve e-posta adresinizi size cevap vermek için işleriz; Google da e-postaları Gmail hizmeti kapsamında kendi sorumluluğunda ayrıca işler (madde 6).</p>
+<p><strong>1. Sorumlu</strong><br>Murat Dursun, Weißenhornstr. 4, 85055 Ingolstadt, Almanya · e-posta: <a href="mailto:mddevlab@gmail.com">mddevlab@gmail.com</a>.</p>
+<p><strong>2. Çerez yok, takip yok</strong><br>Bu site çerez (cookie), istatistik veya takip aracı, reklam, sosyal medya eklentisi ve gömülü video kullanmaz; başka sunuculardan yazı tipi ya da kod yüklemez. Siteyi kullanmak için bize hiçbir kişisel bilgi vermek zorunda değilsiniz.</p>
+<p><strong>3. Barındırma ve sunucu kayıtları</strong><br>Site GitHub Pages'te barındırılır (GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, ABD). Siteyi açtığınızda GitHub, sayfayı göstermek ve güvenliği sağlamak için teknik olarak gerekli verileri otomatik işler; özellikle IP adresiniz, giriş tarihi ve saati ile tarayıcı bilgileri. Yasal dayanak: GDPR Madde 6(1)(f) (sitenin güvenli ve sorunsuz çalışmasındaki meşru menfaat). GitHub bunun için teknik hizmet sağlayıcılar (ör. içerik dağıtım ağları) kullanabilir. Bu kayıtlara bizim erişimimiz yoktur. GitHub'ın bunları ne kadar sakladığı <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub gizlilik bildiriminde</a> açıklanır.</p>
+<p><strong>4. Yurt dışına veri aktarımı</strong><br>GitHub bir ABD şirketi olduğu için veriler ABD'de işlenebilir. GitHub bunun için AB-ABD Veri Gizliliği Çerçevesine (Data Privacy Framework) ve Avrupa Komisyonu'nun onayladığı standart sözleşme maddelerine dayanır. E-posta sağlayıcımız da (bkz. madde 6) verileri sizin ülkeniz dışında işleyebilir.</p>
+<p><strong>5. Dil ayarı</strong><br>Sadece bir dil düğmesine tıkladığınızda seçiminiz (ör. "tr") sadece kendi tarayıcınızda (localStorage) saklanır; böylece site bir dahaki sefere o dilde açılır. Bize hiçbir zaman gönderilmez ve kişisel veri içermez. Siz tarayıcı ayarlarından silene kadar kalır. Bu kayıt, sizin kendiniz istediğiniz bir özellik için kesinlikle gereklidir, bu yüzden izin gerekmez (TDDDG § 25 Abs. 2 Nr. 2, e-Gizlilik Direktifi Madde 5(3)). Bu nedenle sitede çerez onay kutusu yoktur.</p>
+<p><strong>6. E-posta ile iletişim</strong><br>Bize e-posta yazarsanız adresinizi ve mesajınızı sadece size cevap vermek için kullanırız. Yasal dayanak: GDPR Madde 6(1)(f) (talebinize cevap vermekteki meşru menfaat); talebiniz bir sözleşme yapılmasıyla ilgiliyse GDPR Madde 6(1)(b). Konu kapanınca sileriz; kanun daha uzun saklamamızı gerektiriyorsa o süre kadar tutarız. E-postaları normal bir Gmail hesabıyla alıyoruz. Google (Google Ireland Limited, Dublin, İrlanda) burada bizim adımıza veri işleyen değildir; e-postaları kendi sorumluluğunda ve kendi <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">gizlilik politikasına</a> göre işler, veriler AB dışında da işlenebilir. Bize yazmak isteğe bağlıdır; ancak e-posta adresiniz olmadan size cevap veremeyiz. Lütfen e-postayla hassas bilgi göndermeyin.</p>
+<p><strong>7. Dış linkler</strong><br>Bu sitede başka sitelere linkler var (ör. layerling.com ve github.com). Linke tıklamadığınız sürece onlara hiçbir veri gitmez; tıkladıktan sonra o sitelerin kendi gizlilik kuralları geçerlidir.</p>
+<p><strong>8. Yapmadıklarımız</strong><br>Kişisel verileri satmıyor ve reklam amacıyla kullanmıyoruz. Profil çıkarmıyor ve otomatik karar vermiyoruz. Hizmet sağlayıcılarımız (GitHub, Google) verileri yalnızca bu gizlilik politikasında açıklanan hizmetler kapsamında işler.</p>
+<p><strong>9. Çocuklar</strong><br>Bu site genel kitleye yöneliktir, çocuklara yönelik değildir. Bilerek çocuklardan kişisel veri toplamayız. Bir çocuğun bize e-postayla kişisel bilgi gönderdiğini düşünüyorsanız bize haber verin, sileriz.</p>
+<p><strong>10. Güvenlik</strong><br>Site sadece şifreli bağlantı (HTTPS) üzerinden sunulur.</p>
+<p><strong>11. Haklarınız</strong><br>Yaşadığınız yere göre kişisel verilerinizle ilgili şu haklarınız var. Kullanmak için bize e-posta yazmanız yeterli; ücretsizdir ve bu hakları kullandığınız için size farklı davranılmaz.</p>
+<p>• <strong>AB, AEA ve Birleşik Krallık (GDPR / UK GDPR):</strong> bilgi alma, düzeltme, silme, işlemeyi kısıtlama, veri taşınabilirliği ve itiraz hakları (GDPR Madde 15–21) ve bir denetim kurumuna şikâyet hakkı; ör. Bavyera Veri Koruma Denetim Dairesi (BayLDA), Promenade 18, 91522 Ansbach, Almanya, ya da kendi ülkenizdeki kurum.<br>
+• <strong>Türkiye (KVKK, 6698 sayılı Kanun):</strong> 11. madde kapsamındaki haklar; verilerinizin işlenip işlenmediğini öğrenme, bilgi isteme, düzeltme veya silinmesini isteme, yurt dışına aktarılıp aktarılmadığını öğrenme ve Kişisel Verileri Koruma Kurumu'na (KVKK) şikâyet etme hakkı.<br>
+• <strong>ABD, ör. Kaliforniya (CCPA/CPRA), uygulandığı ölçüde:</strong> kişisel bilgileri öğrenme, sildirme ve düzelttirme hakkı. Kişisel bilgileri satmıyoruz.<br>
+• <strong>Diğer ülkeler:</strong> kişisel verilerinize ilişkin haklarınız, ülkenizde geçerli olan mevzuata bağlıdır.</p>
+<p><strong>12. İtiraz hakkı (GDPR Madde 21)</strong><br><strong>Verilerinizi meşru menfaat dayanağıyla (GDPR Madde 6(1)(f)) işlediğimiz durumlarda, kendi özel durumunuzdan kaynaklanan sebeplerle bu işlemeye her zaman itiraz etme hakkınız vardır.</strong> Bunun üzerine verilerinizi artık işlemeyiz; ancak zorlayıcı meşru sebepler gösterebilirsek veya işleme hukuki taleplerin ileri sürülmesi, kullanılması ya da savunulması için gerekliyse bu geçerli değildir. Bize basit bir e-posta yazmanız yeterlidir.</p>
+<p><strong>13. Değişiklikler</strong><br>Site değiştiğinde (ör. ileride yeni bir özellik eklersek) bu politikayı güncelleriz. Güncel hali her zaman bu sayfadadır.</p>
+<p>Almanca, İngilizce ve Türkçe metinler arasında fark olursa Almanca metin geçerlidir.</p>
+<p class="small">Güncelleme: Kasım 2026</p>
+</div>
+</main>
+<footer><div class="wrap">© 2026 MDDevLab™ · Building Smarter Solutions</div></footer>
+<script>
+const T={tr:{back:"← Ana sayfa"},de:{back:"← Startseite"},en:{back:"← Home"}};
+function setLang(l){if(!T[l])l="en";document.documentElement.lang=l;
+ document.querySelectorAll("[data-i18n]").forEach(e=>e.innerHTML=T[l][e.dataset.i18n]||"");
+ document.querySelectorAll("[data-block]").forEach(b=>b.style.display=b.dataset.block===l?"block":"none");
+ document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.lang===l));
+ if(location.hash){const t=document.querySelector('[data-block="'+l+'"] '+location.hash);if(t)t.scrollIntoView();}}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{setLang(b.dataset.lang);try{localStorage.setItem("mddevlab-lang",b.dataset.lang)}catch(e){}}));
+let s="";try{s=localStorage.getItem("mddevlab-lang")||""}catch(e){}
+if(!s){s="en"}
+setLang(s);
+</script>
+</body>
+</html>
